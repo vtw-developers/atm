@@ -1,0 +1,37 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.6'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.apache.camel.springboot:camel-spring-boot-dependencies:3.12.0'
+    }
+}
+
+dependencies {
+    implementation 'org.apache.camel.springboot:camel-spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.apache.camel:camel-endpointdsl'
+    implementation 'org.apache.camel.springboot:camel-kafka-starter'
+    implementation 'org.apache.camel.springboot:camel-elasticsearch-rest-starter'
+    implementation 'org.apache.camel.springboot:camel-jackson-starter'
+    implementation 'org.apache.camel.springboot:camel-http-starter'
+    implementation 'org.apache.camel.springboot:camel-hdfs-starter'
+    implementation 'org.apache.camel.springboot:camel-jdbc-starter'
+    runtimeOnly group: 'org.apache.hive', name: 'hive-jdbc', version: '3.1.2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}
