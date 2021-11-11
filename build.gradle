@@ -23,12 +23,14 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation 'org.apache.camel:camel-endpointdsl'
     implementation 'org.apache.camel.springboot:camel-kafka-starter'
-    implementation 'org.apache.camel.springboot:camel-elasticsearch-rest-starter'
+    /*implementation 'org.apache.camel.springboot:camel-elasticsearch-rest-starter'*/
     implementation 'org.apache.camel.springboot:camel-jackson-starter'
     implementation 'org.apache.camel.springboot:camel-http-starter'
     implementation 'org.apache.camel.springboot:camel-hdfs-starter'
     implementation 'org.apache.camel.springboot:camel-jdbc-starter'
+    implementation 'org.apache.camel.springboot:camel-sql-starter'
     runtimeOnly group: 'org.apache.hive', name: 'hive-jdbc', version: '3.1.2'
+    implementation 'org.apache.hadoop:hadoop-client:3.3.1'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

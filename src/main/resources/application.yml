@@ -9,10 +9,9 @@ camel:
       host-addresses: 34.64.234.45:9200
       user: elastic
       password: BpBP835js0eHzbk5LfhW
-
 spring:
   datasource:
     driver-class-name: org.apache.hive.jdbc.HiveDriver
-    url: jdbc:hive2://34.64.121.197:10000
-    username:
-    password:
+    url: jdbc:hive2://34.64.224.104:10000
+    username: hadoop
+    password: 30539wDbsAl1!
